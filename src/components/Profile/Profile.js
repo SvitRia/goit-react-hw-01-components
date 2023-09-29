@@ -1,10 +1,5 @@
 import user from 'Data/user.json'
-export const Profile = (user) => {
-  const username = user.username;
-  const tag = user.tag;
-  const location = user.location;
-  const avatar = user.avatar;
-  const stats = user.stats
+export const Profile = ({avatar, username, tag, location, stats}) => {
 
     return <div className="profile"><div className="description">
     <img
@@ -20,7 +15,7 @@ export const Profile = (user) => {
   <ul className="stats">
     <li>
       <span className="label">Followers</span>
-          <span className="quantity">{stats.follovers}</span>
+          <span className="quantity">{stats.followers}</span>
     </li>
     <li>
       <span className="label">Views</span>
