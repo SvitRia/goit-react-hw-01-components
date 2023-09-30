@@ -1,7 +1,9 @@
 import { Profile } from "components/Profile/Profile"
 import { Statistics } from "components/Statistics/statistics"
+import { Frienlist } from "components/FriendList/friendlist"
 import user from "Data/user.json"
 import data from "Data/data.json"
+import friends from "Data/friends.json"
 
 
 export function App() {
@@ -15,8 +17,8 @@ export function App() {
   stats={user.stats}
             />
             
-<Statistics title="Upload stats" stats={data} />
-{/* <Statistics stats={data} /> */}
+           <Statistics title="Upload stats" stats={data} />
+            <Frienlist friends={friends } />
         </div>
     )
 }
