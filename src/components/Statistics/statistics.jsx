@@ -1,21 +1,22 @@
-export const StatisticsTittle = ({title}) => {
+import style from "./Statistics.module.css"
+export const StatisticsTittle = ({ title }) => {
     return (
-        <h2 className="title">{title}</h2>
+        <h2 className={style.title}>{title}</h2>
     )
 }
 export const StatisticsItem = ({ id, label, percentage }) => {
     return (
-        <li className="item" key={id}>
-            <span className="label">{label}</span>
-            <span className="percentage">{percentage} %</span>
+        <li className={style.item} key={id}>
+            <span className={style.label}>{label}</span>
+            <span className={style.percentage}>{percentage} %</span>
         </li>
     );
 };
 export const Statistics = ({ title, stats }) => {
     return (
-        <section className="statistics">
+        <section className={style.statistics}>
             <StatisticsTittle title={title} />
-            <ul className="stat-list">
+            <ul className={style.statList}>
                 {stats.map((stat) => (
                     <StatisticsItem id={stat.id} label={stat.label} percentage={stat.percentage}>  </StatisticsItem> ))}
   </ul>
