@@ -1,5 +1,5 @@
 import style from "./Statistics.module.css"
-import { Span } from "./Statistic";
+import { Span } from "./Statistics.styled";
 
 export const StatisticsTittle = ({ title }) => {
     return (
