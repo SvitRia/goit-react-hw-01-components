@@ -1,4 +1,6 @@
 import style from "./Statistics.module.css"
+import { Span } from "./Statistic";
+
 export const StatisticsTittle = ({ title }) => {
     return (
         <h2 className={style.title}>{title}</h2>
@@ -6,10 +8,10 @@ export const StatisticsTittle = ({ title }) => {
 }
 export const StatisticsItem = ({ id, label, percentage }) => {
     return (
-        <li className={style.item} key={id}>
+        <Span className={style.item} key={id}>
             <span className={style.label}>{label}</span>
             <span className={style.percentage}>{percentage} %</span>
-        </li>
+        </Span>
     );
 };
 export const Statistics = ({ title, stats }) => {

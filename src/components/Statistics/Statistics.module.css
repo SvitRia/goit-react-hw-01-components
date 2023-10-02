@@ -31,14 +31,15 @@
     border: 1px solid darkgray;
     align-items: center;
     padding: 10px 0;
+  
 }
 
 .label {
     font-size: 16px;
-    color: gray;
+    color: white;
 }
 
 .percentage {
     font-size: 22px;
-    color: gray;
+    color: white;
 }
