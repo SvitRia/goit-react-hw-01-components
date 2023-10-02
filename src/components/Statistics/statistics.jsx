@@ -1,12 +1,12 @@
 import style from "./Statistics.module.css"
 import { Span } from "./Statistics.styled";
 
-export const StatisticsTittle = ({ title }) => {
+ const StatisticsTittle = ({ title }) => {
     return (
         <h2 className={style.title}>{title}</h2>
     )
 }
-export const StatisticsItem = ({ id, label, percentage }) => {
+ const StatisticsItem = ({ id, label, percentage }) => {
     return (
         <Span className={style.item} key={id}>
             <span className={style.label}>{label}</span>
@@ -14,7 +14,7 @@ export const StatisticsItem = ({ id, label, percentage }) => {
         </Span>
     );
 };
-export const Statistics = ({ title, stats }) => {
+export const StatisticsTotal = ({ title, stats }) => {
     return (
         <section className={style.statistics}>
             <StatisticsTittle title={title} />
