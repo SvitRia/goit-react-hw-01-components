@@ -1,9 +1,9 @@
 import style from "./Friends.module.css"
 import { Status } from "./Friends.styled";
 
-export const FriendListItem = ({ id, avatar, name, isOnline }) => {
+export const FriendListItem = ({ avatar, name, isOnline }) => {
 return( 
-    <li className={style.item} key={id}>
+    <li className={style.item}>
         {/* <span className="status">{isOnline}</span> */}
         <Status isOnline={isOnline}/>
         <img className={style.avatar} src={avatar} alt={name} width="48" />
@@ -15,7 +15,7 @@ export const Frienlist = ({ friends }) => {
     return (
         <ul className={style.friendList}>
                {friends.map((friend) => (
-                    <FriendListItem id={friend.id} avatar={friend.avatar} name={friend.name} isOnline={friend.isOnline}>  </FriendListItem> ))}
+                    <FriendListItem key={friend.id} avatar={friend.avatar} name={friend.name} isOnline={friend.isOnline}>  </FriendListItem> ))}
   </ul>
 
     )

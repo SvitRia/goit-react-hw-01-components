@@ -10,8 +10,8 @@ export const TransactionsHead = () => {
     </thead>)
 }
 
-export const TransactionsItem = ({type, amount, currency, id }) => {
-    return ( <tr key={id}>
+export const TransactionsItem = ({type, amount, currency }) => {
+    return ( <tr >
       <td>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
@@ -25,7 +25,7 @@ export const TransactionsItem = ({type, amount, currency, id }) => {
       <table className={style.transactionHistory}>
           <TransactionsHead />
          <tbody>
-                {transactions.map((transaction) => <TransactionsItem id={transaction.id} type={transaction.type} amount={transaction.amount} currency={transaction.currency}></TransactionsItem>)}
+                {transactions.map((transaction) => <TransactionsItem key={transaction.id} type={transaction.type} amount={transaction.amount} currency={transaction.currency}></TransactionsItem>)}
   </tbody>
 </table>
     )

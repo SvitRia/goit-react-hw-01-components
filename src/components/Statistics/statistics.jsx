@@ -6,9 +6,9 @@ import { Span } from "./Statistics.styled";
         <h2 className={style.title}>{title}</h2>
     )
 }
- const StatisticsItem = ({ id, label, percentage }) => {
+ const StatisticsItem = ({ label, percentage }) => {
     return (
-        <Span className={style.item} key={id}>
+        <Span className={style.item}>
             <span className={style.label}>{label}</span>
             <span className={style.percentage}>{percentage} %</span>
         </Span>
@@ -20,7 +20,7 @@ export const StatisticsTotal = ({ title, stats }) => {
             <StatisticsTittle title={title} />
             <ul className={style.statList}>
                 {stats.map((stat) => (
-                    <StatisticsItem id={stat.id} label={stat.label} percentage={stat.percentage}>  </StatisticsItem> ))}
+                    <StatisticsItem key={stat.id} label={stat.label} percentage={stat.percentage}>  </StatisticsItem> ))}
   </ul>
 </section>
     )
